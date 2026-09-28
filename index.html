@@ -448,7 +448,8 @@
       </div>
       <div class="hero-cta">
         <a href="mailto:daniel.munoz@alumnos.upm.es" class="btn btn-primary"><span data-en="Contact me">Contactar</span></a>
-        <a href="https://www.linkedin.com/in/daniel-mu%C3%B1oz-de-la-c%C3%A1mara-69822a274/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn →</a>
+        <a href="https://www.linkedin.com/in/daniel-munoz-dlc/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn →</a>
+        <a id="cv-pdf" href="CV_Daniel_Munoz_de_la_Camara_ES.pdf" download class="btn btn-outline"><span data-en="Download CV (PDF)">Descargar CV (PDF)</span></a>
       </div>
     </div>
     <div class="hero-visual">
@@ -564,7 +565,7 @@
     <div class="edu-entry">
       <div class="edu-year"><span data-en="2022 - present">2022 - act.</span></div>
       <div>
-        <h3><span data-en="BSc in Geospatial Information Technologies">Grado en Tecnologías de la Información Geoespacial</span></h3>
+        <h3><span data-en="Bachelor&#x27;s Degree in Geospatial Information Technologies">Grado en Tecnologías de la Información Geoespacial</span></h3>
         <p><span data-en="School of Surveying, Geodesy and Cartography Engineering - Universidad Politécnica de Madrid (UPM)">ETSI Topografía, Geodesia y Cartografía - Universidad Politécnica de Madrid (UPM)</span></p>
         <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--muted);"><span data-en="Key courses: Applied Remote Sensing, Time Series Analysis, Thematic Cartography, Geospatial Web Application Development, Spatial Databases">Asignaturas clave: Teledetección Aplicada, Análisis de Series Temporales, Cartografía Temática, Desarrollo de Aplicaciones Web Geoespaciales, Bases de Datos Espaciales</span></p>
       </div>
@@ -622,7 +623,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
           Email
         </a>
-        <a href="https://www.linkedin.com/in/daniel-mu%C3%B1oz-de-la-c%C3%A1mara-69822a274/" target="_blank" rel="noopener">
+        <a href="https://www.linkedin.com/in/daniel-munoz-dlc/" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
         </a>
@@ -654,6 +655,8 @@
     buttons.forEach(function (b) {
       b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false');
     });
+    var pdf = document.getElementById('cv-pdf');
+    if (pdf) pdf.href = lang === 'en' ? 'CV_Daniel_Munoz_de_la_Camara_EN.pdf' : 'CV_Daniel_Munoz_de_la_Camara_ES.pdf';
     if (save) { try { localStorage.setItem('cv-lang', lang); } catch (e) {} }
   }
 
